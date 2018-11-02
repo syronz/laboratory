@@ -1,0 +1,8 @@
+Array
+(
+    [id_test] => 1
+    [min_age] => 15
+    [max_age] => 30
+    [gender] => man
+    [detail] => good detail
+)
