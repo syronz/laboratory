@@ -83,8 +83,8 @@ class database{
 		// 		header('location:'.setting::APP_URL.'/login.php?alert=Try Again!');
 		// 		// die('You Havent Permission'); 
 		// 	}
-	    $this->pdo = new PDO('mysql:host=localhost;dbname=laboratory', 'root', setting::MYSQL_PASSWORD);
-		// $this->pdo = new PDO('mysql:host=localhost;dbname=diwan', 'root', '!@#$%%$#@!mysql13661364');
+	    $this->pdo = new PDO('mysql:host=localhost;dbname=laboratory', 'diako', setting::MYSQL_PASSWORD);
+
 	    $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	    $this->pdo->query('SET NAMES utf8');
 

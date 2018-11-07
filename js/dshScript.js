@@ -5,6 +5,8 @@ $(document).ready(function(){
 	router.fund = {list:"fund_list",listDaily:"fund_list_daily"};
 	router.patient = {list:"patient_list",examAdd:"exam_add",print:"patient_cash_print"};
 	router.lab = {examList:"exam_list",examAdd:"exam_add",edit:"lab_exam_edit",examPrintResult:"exam_result_print",examPrice:"exam_price_print"};
+
+	//router.labExamList = "exam_list";
 	// router.lab.examList = {print:"exam_result_print"};
 	router.setting = {profileList:"profile_list",testList:"test_list",normalRanges:"normal_range"};
 	router.system = {logout:"logout"};
@@ -23,6 +25,7 @@ $(document).ready(function(){
 	}
 
 	function loadMain(arrHash,id){
+//console.log(router[arrHash[0]]);
 		$('#loading').css('display','block');
 		if(!id)
 			if(router[arrHash[0]][arrHash[1]])
@@ -66,12 +69,14 @@ $(document).ready(function(){
 
 		var str = window.location.hash;
 		var str = str.substr(1);
-		var arrHash = str.split('>');
-		// console.log(arrPanel);
-		// console.log(arrHash);
+		var arrHash = str.split('%3E');
+		 //console.log(arrPanel);
+		//console.log(arrHash);
 
 		var x = $('#'+arrPanel[arrHash[0]]);
+
 		if(arrHash[0] in arrPanel){
+//console.log(arrHash, x);
 			if(!arrHash[3]){
 				showPanel(x);
 				// $('#loading').css('display','block');

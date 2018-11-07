@@ -38,7 +38,7 @@ if($size > 1)
 
 </style>
 <div style="width:7.5cm; font-size:1em;">
-<img src="images/logo3.png" alt="Soma Laboratory" style="float:right; width:110px;">
+<img src="images/logo3.png" alt="Soma Laboratory" style="float:right; width:110px; opacity:0;">
 <h4> Laboratory Price</h4>
 <div style="float:left; font-size:smaller;">
 Exam ID # : <?php echo $examHeaderInfo['id']; ?> <br>
@@ -82,10 +82,12 @@ echo '</table>';
 
 </div>
 <hr>
+<!--
 <div style="font-size:9px;text-align:center; margin:0 3px;">
 <p>ناونیشان: سلێمانی - نزیک کباب قادر - سەروو نەخۆشخانەی سۆما - پشت تەلاری نمای پزشکی - نهۆمی زەمینی پۆلیکلینیکی پسپۆریی هاوکاری نیشتمان</p>
 <p>07701943869 - 07501943869</p>
 </div>
+-->
 </div>
 <?php
 // dsh($_GET);

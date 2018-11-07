@@ -26,7 +26,7 @@
 							</a>
 							<a href="#home" class="list-group-item"><?php dic_show('Home'); ?></a>
 							<a href="#fund>list" class="list-group-item"><?php dic_show('Fund List'); ?></a>
-							<a href="#fund>listDay" class="list-group-item"><?php dic_show('Fund Per Day'); ?></a>
+							
 							<a href="#print" class="list-group-item"><?php dic_show('Print'); ?></a>
 							<!-- <a href="#fund>monthReport" class="list-group-item"><?php dic_show('Fund Per Month'); ?></a> -->
 						</div>
