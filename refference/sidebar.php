@@ -1,6 +1,6 @@
 					<div class="sidePanel" id="homePanel">
 						<div class="list-group">
-							<a class="list-group-item active">
+							<a class="list-group-item list-group-item-success">
 								<?php dic_show('Home');dic_show(' Options'); ?>
 							</a>
 							<a href="#fund>list" class="list-group-item"><?php dic_show('Fund'); ?></a>
@@ -21,7 +21,7 @@
 
 					<div class="sidePanel" id="fundPanel">
 						<div class="list-group">
-							<a class="list-group-item active">
+							<a class="list-group-item list-group-item-success">
 								<?php dic_show('Fund');dic_show(' Options'); ?>
 							</a>
 							<a href="#home" class="list-group-item"><?php dic_show('Home'); ?></a>
@@ -34,7 +34,7 @@
 
 					<div class="sidePanel" id="patientPanel">
 						<div class="list-group">
-							<a class="list-group-item active">
+							<a class="list-group-item list-group-item-success">
 								<?php dic_show('Patient');dic_show(' Options'); ?>
 							</a>
 							<!-- <a href="#patient>examAdd" class="list-group-item"><?php dic_show('Add New Exam'); ?></a> -->
@@ -45,7 +45,7 @@
 
 					<div class="sidePanel" id="labPanel">
 						<div class="list-group">
-							<a class="list-group-item active">
+							<a class="list-group-item list-group-item-success">
 								<?php dic_show('Test');dic_show(' Options'); ?>
 							</a>
 							<a href="#lab>examAdd" class="list-group-item"><?php dic_show('Add New Exam'); ?></a>
@@ -57,7 +57,7 @@
 
 					<div class="sidePanel" id="settingPanel">
 						<div class="list-group">
-							<a class="list-group-item active">
+							<a class="list-group-item list-group-item-success ">
 								<?php dic_show('Setting');dic_show(' Options'); ?>
 							</a>
 							<a href="#home" class="list-group-item"><?php dic_show('Home'); ?></a>

@@ -78,12 +78,8 @@ class database{
 	public static $PDO;
 	function __construct(){
 		try {
-		// if(strpos($_SERVER['HTTP_USER_AGENT'],'Linux') === false || strpos($_SERVER['HTTP_USER_AGENT'],'Chrome') === false)
-		// 	if(strpos($_SERVER['HTTP_USER_AGENT'],'Mozilla/5.0 (iPad; CPU OS 7_1 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) CriOS/26.0.1410.50 Mobile/11D167 Safari/8536.25') === false){
-		// 		header('location:'.setting::APP_URL.'/login.php?alert=Try Again!');
-		// 		// die('You Havent Permission'); 
-		// 	}
-	    $this->pdo = new PDO('mysql:host=localhost;dbname=laboratory', 'diako', setting::MYSQL_PASSWORD);
+	    /* $this->pdo = new PDO('mysql:host=127.0.0.1;dbname=laboratory', 'root', setting::MYSQL_PASSWORD); */
+	    $this->pdo = new PDO('mysql:host=127.0.0.1;dbname=laboratory', 'travis');
 
 	    $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	    $this->pdo->query('SET NAMES utf8');
