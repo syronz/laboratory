@@ -1,4 +1,4 @@
-					<div class="sidePanel" id="homePanel">
+					<div class="sidePanel no-print" id="homePanel">
 						<div class="list-group">
 							<a class="list-group-item list-group-item-success">
 								<?php dic_show('Home');dic_show(' Options'); ?>
@@ -19,7 +19,7 @@
 						</div>
 					</div>
 
-					<div class="sidePanel" id="fundPanel">
+					<div class="sidePanel no-print" id="fundPanel">
 						<div class="list-group">
 							<a class="list-group-item list-group-item-success">
 								<?php dic_show('Fund');dic_show(' Options'); ?>
@@ -32,7 +32,7 @@
 						</div>
 					</div>
 
-					<div class="sidePanel" id="patientPanel">
+					<div class="sidePanel no-print" id="patientPanel">
 						<div class="list-group">
 							<a class="list-group-item list-group-item-success">
 								<?php dic_show('Patient');dic_show(' Options'); ?>
@@ -43,7 +43,7 @@
 						</div>
 					</div>
 
-					<div class="sidePanel" id="labPanel">
+					<div class="sidePanel no-print no-print" id="labPanel">
 						<div class="list-group">
 							<a class="list-group-item list-group-item-success">
 								<?php dic_show('Test');dic_show(' Options'); ?>
@@ -55,7 +55,7 @@
 						</div>
 					</div>
 
-					<div class="sidePanel" id="settingPanel">
+					<div class="sidePanel no-print" id="settingPanel">
 						<div class="list-group">
 							<a class="list-group-item list-group-item-success ">
 								<?php dic_show('Setting');dic_show(' Options'); ?>

@@ -6,7 +6,7 @@
 	<span class="icon-bar"></span>
 	<span class="icon-bar"></span>
 
-								</button>	<a class="navbar-brand" href="#about"><?php dic_show('Soma-Lab'); ?></a>
+								</button>	<a class="navbar-brand" href="#about"><?php dic_show('Laboratory'); ?></a>
 
 							</div>
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

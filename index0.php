@@ -29,7 +29,7 @@
 					<?php require_once 'refference/sidebar.php';?>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row no-print">
 				<div class="col-md-12">
 					<div class="well well-sm" style="margin:10px 0 0 0"> Presented By SomaICT
 						<p id="theTimer">00:00:00</p>

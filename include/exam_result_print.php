@@ -54,7 +54,7 @@ h4{
 	font-size: smaller;
 }
 </style>
-<img src="images/baner.jpg" style="width:100%; opacity:0;">
+<img src="images/baner.jpg" style="width:100%;">
 <!--<img src="images/logo3.png" alt="Soma Laboratory" style="float:left;">
 <div style="float:right; font-size:smaller;">
 Exam ID # : <?php echo $examHeaderInfo['id']; ?> <br>
@@ -177,7 +177,7 @@ if(@$examHeaderInfo['detail']){
 <span style="color:black;font-size:10px;">Normal</span>
 <!-- <hr style="margin-top:3px"> -->
 <div class="footPage" style="direction:ltr;text-align:center; font-size:10px; color:#FE0000">
-<img src="images/footer.jpg" style="width:100%;  opacity:0;">
+<img src="images/footer.jpg" style="width:100%;">
 </div>
 <?php
 // dsh($_GET);

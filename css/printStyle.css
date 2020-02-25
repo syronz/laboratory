@@ -9,6 +9,10 @@ div.jtable-main-container > table.jtable > thead th.jtable-column-header-sortabl
 	background-image: none;
 }
 
+.noPrint {
+  display: none;
+}
+
 td{
 	font-size: smaller;
 	/*background-color: red;*/

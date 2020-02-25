@@ -97,7 +97,7 @@ else{
 	window.history.back(); 
 	if(arrHash[0] == 'print'){
 		var printDivCSS = new String ('<link href="scripts/jtable.2.3.1/themes/metro/blue/jtable.css" rel="stylesheet" type="text/css" />'+'<link href="css/printStyle.css" rel="stylesheet">');
-				// var styles = '<style> td{text-decoration:none;} </style>';
+				var styles = '<style> td{text-decoration:none;} </style>';
 				window.frames["print_frame"].document.body.innerHTML=printDivCSS + document.getElementById("main").innerHTML;
 				window.frames["print_frame"].window.focus();
 				window.frames["print_frame"].window.print();
