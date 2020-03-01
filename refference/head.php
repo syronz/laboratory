@@ -1,8 +1,8 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="author" content="Diako Amir [sabina.diako@gmail.com]">
-		<title>Soma-Laboratory</title>
+		<meta name="author" content="Support [sabina.diako@gmail.com]">
+		<title>Xer-Lab</title>
 		<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="themes/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />

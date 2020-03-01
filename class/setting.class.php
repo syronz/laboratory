@@ -5,8 +5,8 @@ class setting{
 
 	const NOT_DELETED_DATA_FUND = 0;
 	
-	const APP_URL = 'http://127.0.0.1/LMS';
-	const MYSQL_PASSWORD = 'password';
+	const APP_URL = 'http://xwebserver-lab';
+        const MYSQL_PASSWORD = 'bEaLE9MQAetCmYUl7OqCug';
 
 
 }

@@ -79,7 +79,7 @@ class database{
 	function __construct(){
 		try {
 	    /* $this->pdo = new PDO('mysql:host=127.0.0.1;dbname=laboratory', 'root', setting::MYSQL_PASSWORD); */
-	    $this->pdo = new PDO('mysql:host=127.0.0.1;dbname=laboratory', 'travis');
+	    $this->pdo = new PDO('mysql:host=xmysqldb-lab;dbname=lab1', 'root','bEaLE9MQAetCmYUl7OqCug');
 
 	    $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	    $this->pdo->query('SET NAMES utf8');
