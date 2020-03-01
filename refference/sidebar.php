@@ -14,7 +14,7 @@
 									<h3>About Program</h3>
 
 								<p>This Program designed for limited laboratory actions.</p>
-								<p>For any optimize or change this program, contact with <a href="http://about.me/diako.amir" target="_blank">Diako Amir</a> Email: [sabina.diako@gmail.com] Phone: [0750 514 9171]</p>
+								<p>For any optimize or change this program, contact with <br>Muslih Taha [0750 412 7006] <br>Diako Amir [0750 514 9171]<br> Email: [sabina.diako@gmail.com] </p>
 							</div>
 						</div>
 					</div>

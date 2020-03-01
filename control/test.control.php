@@ -38,6 +38,10 @@ switch ($_GET['action']) {
 	case 'insertResult':
 		echo test::insertResult($_POST);
 		break;
+
+	case 'deleteResult':
+		echo test::deleteResult($_POST);
+		break;
 	 
 	default:
 		

@@ -215,6 +215,30 @@ public static function insertResult($data){
 		}
 	}
 
+	public static function deleteResult($id){
+		try{
+			if(!self::check_perm_manage(self::$TABLE)){
+				$jTableResult['Result'] = "NO";
+				$jTableResult['Message'] = dic_return('You Havent Permission To Edit!!!');
+				self::record('write','WARNING : Try delete data in testm but havent permission',"DATA : id = $id");
+				return json_encode($jTableResult);
+			}
+			$sql = "DELETE FROM exam_tests WHERE id = :id";
+			$stmt = self::$PDO->prepare($sql);
+			$stmt->bindParam(':id',$_POST['id'],PDO::PARAM_INT);
+			$stmt->execute();
+
+			$jTableResult = array();
+			$jTableResult['Result'] = "OK";
+			self::record('write','WARNING : Delete data in exam_tests',"DATA : id = $id");
+			return json_encode($jTableResult);
+		}
+		catch(PDOException $e){
+			echo 'Error: [test.class.php/function delete]'.$e->getMessage().'<br>';
+			die();
+		}
+	}
+
 	public static function json_list($part,$for_all=null){
 		try{
 			$sql = "SELECT id AS Value,name AS DisplayText FROM ".self::$TABLE;

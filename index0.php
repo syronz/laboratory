@@ -31,7 +31,7 @@
 			</div>
 			<div class="row no-print">
 				<div class="col-md-12">
-					<div class="well well-sm" style="margin:10px 0 0 0"> Presented By SomaICT
+					<div class="well well-sm" style="margin:10px 0 0 0"> Presented By <a href="http://erp14.com">ERP14</a>
 						<p id="theTimer">00:00:00</p>
 					</div>
 				</div>

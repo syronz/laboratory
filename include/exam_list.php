@@ -42,7 +42,7 @@
 											// listAction: 'control/normal_range.control.php?action=detail_list&id_test='+std.record.id,
 											createAction: false,
 											updateAction: 'control/test.control.php?action=insertResult',
-											deleteAction: false
+											deleteAction: 'control/test.control.php?action=deleteResult',
 										},
 										fields: {
 					id: {
