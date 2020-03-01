@@ -14,7 +14,7 @@
 									<h3>About Program</h3>
 
 								<p>This Program designed for limited laboratory actions.</p>
-								<p>For support contact us <br> 0750 514 9171] <br> Email: [sabina.diako@gmail.com] </p>
+								<p>For support contact us at <b> 0750 514 9171 </b> <br> Email: <b>sabina.diako@gmail.com</b> </p>
 							</div>
 						</div>
 					</div>
