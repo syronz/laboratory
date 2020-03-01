@@ -14,7 +14,7 @@
 									<h3>About Program</h3>
 
 								<p>This Program designed for limited laboratory actions.</p>
-								<p>For any optimize or change this program, contact with <br>Muslih Taha [0750 412 7006] <br>Diako Amir [0750 514 9171]<br> Email: [sabina.diako@gmail.com] </p>
+								<p>For support contact us <br> 0750 514 9171] <br> Email: [sabina.diako@gmail.com] </p>
 							</div>
 						</div>
 					</div>
