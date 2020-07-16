@@ -2,11 +2,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Support [sabina.diako@gmail.com]">
-		<title>Xer-Lab</title>
+		<title>Laboratory</title>
 		<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="themes/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
-		<link href="scripts/jtable.2.3.1/themes/metro/green/jtable.css" rel="stylesheet" type="text/css" />
+		<link href="scripts/jtable.2.3.1/themes/metro/blue/jtable.css" rel="stylesheet" type="text/css" />
 <!--<link href="jtable/themes/metro/green/jtable.css" rel="stylesheet" type="text/css" />-->
 		<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
 		<script src="scripts/jquery-ui-1.10.3.custom.js" type="text/javascript"></script>

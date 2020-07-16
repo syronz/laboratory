@@ -95,17 +95,6 @@ class exam extends database{
 
 	public static function create($data){
 		try{
-			// if(!self::check_perm_manage(self::$TABLE)){
-			// 	$jTableResult['Result'] = "NO";
-			// 	$jTableResult['Message'] = dic_return('You Havent Permission To Create!!!');
-			// 	self::record('write','WARNING : Try write data to examm but havent permission',"DATA : name = $name / detail = $detail");
-			// 	return json_encode($jTableResult);
-			// }
-
-			// if(!$data['patientName'] && !$data['patientId'])
-			// 	return 'No Patient';
-
-			// dsh($data['tests']);
 			$idExam = self::idExam() + 1;
 			// dsh($idExam);
 
@@ -116,7 +105,13 @@ class exam extends database{
 			$idFund = fund::idFund();
 
 			if($data['patientName']){
-				$dataPatient = array('dob'=>$data['dob'],'name'=>$data['patientName'],'gender'=>$data['gender'],'detail'=>@$data['detail']);
+        $dataPatient = array(
+          'dob'=>$data['dob'],
+          'name'=>$data['patientName'],
+          'gender'=>$data['gender'],
+          'detail'=>@$data['detail'],
+          'phone'=>@$data['patientPhone'],
+        );
 				patient::create($dataPatient);
 				$idPatient = patient::idPatient();
 				$age = patient::getAge($idPatient);
@@ -282,6 +277,7 @@ class exam extends database{
 				'id'=>array('state'=>'self','field'=>'id'),
 				'total_price'=>array('state'=>'self','field'=>'total_price'),
 				'patient'=>array('state'=>'foreign','table'=>'patient','field'=>'name','source'=>'id_patient'),
+				'phone'=>array('state'=>'foreign','table'=>'patient','field'=>'phone','source'=>'id_patient'),
 				// 'exam'=>array('state'=>'self','field'=>'id'),
 				'date_recieved'=>array('state'=>'self','field'=>'date_recieved'),
 				'detail'=>array('state'=>'self','field'=>'detail')

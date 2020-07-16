@@ -2,9 +2,20 @@ $(document).ready(function(){
 	var arrPanel = {fund:"fundPanel", home:"homePanel", patient:"patientPanel", lab:"labPanel", setting:"settingPanel", system:"settingPanel"};
 	var router = {};
 	router.home = "home";
-	router.fund = {list:"fund_list",listDaily:"fund_list_daily"};
+	router.fund = {
+    list:"fund_list",
+    listDaily:"fund_list_daily",
+    financeDaily: "finance_daily",
+    financeMonthly: "finance_monthly"
+  };
 	router.patient = {list:"patient_list",examAdd:"exam_add",print:"patient_cash_print"};
-	router.lab = {examList:"exam_list",examAdd:"exam_add",edit:"lab_exam_edit",examPrintResult:"exam_result_print",examPrice:"exam_price_print"};
+	router.lab = {
+    examList:"exam_list",
+    examAdd:"exam_add",
+    edit:"lab_exam_edit",
+    examPrintResult:"exam_result_print",
+    examPrice:"exam_price_print"
+  };
 
 	//router.labExamList = "exam_list";
 	// router.lab.examList = {print:"exam_result_print"};
@@ -216,6 +227,7 @@ function calculatePrice(){
 		$('body').on('click','#examAddSubmit',function(){
 			var data = {};
 			data.patientName = $('#patientName').val();
+			data.patientPhone = $('#patientPhone').val();
 			data.dob = $('#dob').val();
 			data.age = $('#age').val();
 			data.gender = $('#gender').val();

@@ -142,7 +142,7 @@ Date : <?php echo Date('Y-m-d',time()); ?>
 					else if($value2['result'] > $normalInfo['max'])
 						$flag = 'H';
 					else
-						$flag = '-';
+						$flag = 'N';
 				}
 				if($flag == 'L')
 					$style = 'style="color:orange;"';

@@ -647,6 +647,97 @@ class fund extends database{
 		}
 	}
 
+	public static function financeDaily($date){
+		try{
+      /* dsh($date); */
+			$where = self::check_permission_view(self::$TABLE);
+      $sql = "SELECT e.id, e.id_patient, p.name, e.date_recieved, e.total_price, e.discount
+        FROM laboratory.exam e
+        inner join patient p on p.id = e.id_patient
+        where date_recieved like '$date%'";
+
+			
+			$result = self::$PDO->query($sql);
+			$rows = $result->fetchAll(PDO::FETCH_ASSOC);
+
+
+			$count = count($rows);
+      $balance = 0;
+      $tDiscount = 0;
+      $tCost = 0;
+
+			for($i=0;$i<$count;$i++){
+        $balance += $rows[$i]['total_price'] - $rows[$i]['discount'];
+        $tDiscount += $rows[$i]['discount'];
+        $tCost += $rows[$i]['total_price'];
+        $rows[$i]['balance'] = dsh_money($balance);
+        $rows[$i]['total_price'] = dsh_money($rows[$i]['total_price']);
+        $rows[$i]['discount'] = dsh_money($rows[$i]['discount']);
+			}
+
+      $rows[$i]['name'] = 'Total';
+      $rows[$i]['total_price'] = dsh_money($tCost);
+      $rows[$i]['discount'] = dsh_money($tDiscount);
+      $rows[$i]['balance'] = dsh_money($balance);
+
+
+			$jTableResult = array();
+			$jTableResult['Result'] = "OK";
+			$jTableResult['TotalRecordCount'] = $count;
+			$jTableResult['Records'] = $rows;
+			self::record('read','View daily finance\'s');
+			return json_encode($jTableResult);
+		}
+		catch(PDOException $e){
+			echo 'Error: [fund.class.php/function lists]'.$e->getMessage().'<br>';
+			die();
+		}
+	}
+
+	public static function financeMonthly(){
+		try{
+      /* dsh($date); */
+			$where = self::check_permission_view(self::$TABLE);
+      $sql = "SELECT substr(date_recieved,1,7) as month, sum(e.total_price) as cost, sum(e.discount) as discount
+        FROM laboratory.exam e
+        group by substr(date_recieved,1,7)";
+			
+			$result = self::$PDO->query($sql);
+			$rows = $result->fetchAll(PDO::FETCH_ASSOC);
+
+
+			$count = count($rows);
+      $balance = 0;
+      $tDiscount = 0;
+      $tCost = 0;
+
+			for($i=0;$i<$count;$i++){
+        $balance += $rows[$i]['cost'] - $rows[$i]['discount'];
+        $tDiscount += $rows[$i]['discount'];
+        $tCost += $rows[$i]['cost'];
+        $rows[$i]['balance'] = dsh_money($balance);
+        $rows[$i]['cost'] = dsh_money($rows[$i]['cost']);
+        $rows[$i]['discount'] = dsh_money($rows[$i]['discount']);
+			}
+
+      $rows[$i]['month'] = 'Total';
+      $rows[$i]['cost'] = dsh_money($tCost);
+      $rows[$i]['discount'] = dsh_money($tDiscount);
+      $rows[$i]['balance'] = dsh_money($balance);
+
+
+			$jTableResult = array();
+			$jTableResult['Result'] = "OK";
+			$jTableResult['TotalRecordCount'] = $count;
+			$jTableResult['Records'] = $rows;
+			self::record('read','View daily finance\'s');
+			return json_encode($jTableResult);
+		}
+		catch(PDOException $e){
+			echo 'Error: [fund.class.php/function lists]'.$e->getMessage().'<br>';
+			die();
+		}
+	}
 
 }
 

@@ -125,12 +125,13 @@ class patient extends database{
 			// 	self::record('write','WARNING : Try write data to patientm but havent permission',"DATA : name = $name / detail = $detail");
 			// 	return json_encode($jTableResult);
 			// }
-			$sql = "INSERT INTO ".self::$TABLE."(dob,name,detail,gender,date) VALUES(:dob,:name,:detail,:gender,NOW());";
+			$sql = "INSERT INTO ".self::$TABLE."(dob,name,detail,gender,date,phone) VALUES(:dob,:name,:detail,:gender,NOW(),:phone);";
 			$stmt = self::$PDO->prepare($sql);
 			$stmt->bindParam(':dob',$data['dob'],PDO::PARAM_STR);
 			$stmt->bindParam(':name',$data['name'],PDO::PARAM_STR);
 			$stmt->bindParam(':detail',$data['detail'],PDO::PARAM_STR);
 			$stmt->bindParam(':gender',$data['gender'],PDO::PARAM_STR);
+			$stmt->bindParam(':phone',$data['phone'],PDO::PARAM_STR);
 			
 			$stmt->execute();
 
@@ -255,6 +256,7 @@ class patient extends database{
 				'id'=>array('state'=>'self','field'=>'id'),
 				'user'=>array('state'=>'foreign','table'=>'user','field'=>'name','source'=>'id_user'),
 				'patient'=>array('state'=>'self','field'=>'name'),
+				'phone'=>array('state'=>'self','field'=>'phone'),
 				'detail'=>array('state'=>'self','field'=>'detail')
 			);
 			

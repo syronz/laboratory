@@ -41,6 +41,14 @@ switch ($_GET['action']) {
 	case 'user_fund_report':
 		echo fund::user_fund_report($_GET["jtSorting"],$_GET["jtStartIndex"],$_GET["jtPageSize"],$_GET["date"]);
 		break;
+
+	case 'finance_daily':
+		echo fund::financeDaily($_GET["date"]);
+		break;
+
+	case 'finance_monthly':
+		echo fund::financeMonthly();
+		break;
 	 
 	default:
 		

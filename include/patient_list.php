@@ -39,6 +39,9 @@
 						title: '<?php dic_show('gender'); ?>',
 						options : {male:'male',female:'female'}
 					},		
+					phone: {
+						title: '<?php dic_show('phone'); ?>'
+					},			
 					detail: {
 						title: '<?php dic_show('detail'); ?>'
 					},			
