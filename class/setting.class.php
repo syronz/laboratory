@@ -5,8 +5,8 @@ class setting{
 
 	const NOT_DELETED_DATA_FUND = 0;
 	
-	const APP_URL = 'http://127.0.0.1/laboratory';
-  const MYSQL_PASSWORD = '';
+	const APP_URL = 'http://localhost/lab';
+	const MYSQL_PASSWORD = 'Qaz1@345';
 
 
 }

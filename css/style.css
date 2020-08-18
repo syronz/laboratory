@@ -5,6 +5,10 @@
     display: none !important;
   }
 }
+
+.blue {
+	color: blue;
+}
 body {
   background-color: #fff;
   overflow-y:scroll;

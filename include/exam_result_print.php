@@ -24,6 +24,9 @@
 
 ?>
 <style>
+* {
+	font-family: arial;
+}
 .tblName,.tblResult{
 	width: 100%;
 }
@@ -43,12 +46,14 @@ h4{
 }
 .tblResult th{
 	/*font-weight: normal;*/
-	font-size: smaller;
+	font-size: 0.7em;
 	border-bottom: 1px solid #428BCA;
 	text-align: left;
+	color: #132e49;
 }
 .tblResult th,.tblResult td{
 	padding: 3px;
+	font-size: 0.7em;
 }
 .footPage{
 	font-size: smaller;
@@ -61,12 +66,15 @@ Exam ID # : <?php echo $examHeaderInfo['id']; ?> <br>
 Date : <?php echo Date('Y-m-d',time()); ?> 
 </div>-->
 <div class="clear" style="clear:both;"></div>
-<h4> Laboratory Result # <?php echo $examHeaderInfo['id']; ?></h4>
+<!--<h4> Laboratory Result # <?php echo $examHeaderInfo['id']; ?></h4>-->
+<div>
+&nbsp;
+</div>
 
 <table class="tblName" border="0">
 	<tr>
 		<td style="vertical-align:top;width:10%">Name :</td>
-		<td style="vertical-align:top;width:25%"><?php echo $patientInfo['name'];?></td>
+		<td style="vertical-align:top;width:25%; font-weight:bold;"><?php echo $patientInfo['name'];?></td>
 		
 		<td style="vertical-align:top;width:10%">Age :</td>
 		<td style="vertical-align:top;width:25%"><?php echo $examHeaderInfo['age']; echo ' ['.$patientInfo['dob'].']';?></td>
@@ -145,9 +153,9 @@ Date : <?php echo Date('Y-m-d',time()); ?>
 						$flag = 'N';
 				}
 				if($flag == 'L')
-					$style = 'style="color:orange;"';
+					$style = 'style="color:orange;font-weight:bold;"';
 				else if($flag == 'H')
-					$style = 'style="color:red;"';
+					$style = 'style="color:red;font-weight:bold;"';
 
 
 				echo "<tr $style>";

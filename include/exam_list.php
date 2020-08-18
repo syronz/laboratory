@@ -170,7 +170,9 @@
 						edit: false,
 						create: false,
 						display: function (std) {
-							var $img = $('<a href="#lab>examPrintResult>'+std.record.id+'"><img src="images/small/print0.png" title="<?php dic_show('Print Exam'); ?>" class="printExamIcon" /></a>');
+							//var $img = $('<a href="#lab>examPrintResult>'+std.record.id+'"><img src="images/small/print0.png" title="<?php dic_show('Print Exam'); ?>" class="printExamIcon" /></a>');
+							//http://127.0.0.1/include/exam_result_print.php?id=1
+							var $img = $('<a target="_blank" href="include/exam_result_print.php?id='+std.record.id+'"><img src="images/small/print0.png" title="<?php dic_show('Print Exam'); ?>" class="printExamIcon" /></a>');
 							return $img;
 						}
 					},
